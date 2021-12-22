@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #0b2b23;
 }
 
 .wrapper {
@@ -27,11 +27,11 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: beige;
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: #bcd8df;
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -42,11 +42,12 @@ header {
   padding: 30px 40px;
 }
 
-.card-header::after {
+.card-header::after,
+.card-footer::before {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #081018;
   height: 2px;
 }
 
@@ -58,14 +59,6 @@ header {
   text-align: center;
 }
 
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
 .card-footer::after {
   content: " ";
   display: block;
@@ -74,10 +67,9 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: rgb(134, 4, 4);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
+  box-shadow: 5px 5px 8px black;
   color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
@@ -88,9 +80,8 @@ header {
   cursor: pointer;
 }
 
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
+.btn:focus {
+  box-shadow: 1px 1px black, inset 0px 0px 5px black;
 }
 
 .float-right {
@@ -98,17 +89,19 @@ button[disabled] {
 }
 
 #password {
+  font-family: monospace;
+  color: aliceblue;
+  background-color: rgb(32, 28, 37);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: none;
   display: block;
   width: 100%;
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
