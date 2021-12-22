@@ -61,6 +61,7 @@ function generatePassword() {
     charSet = charSet + "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
   }
   // Choosing a random selection of characters according to user parameters of length and character type
+  
   var password = "";
   for (i = 1; i <= passwordLength; i++) {
     password =
