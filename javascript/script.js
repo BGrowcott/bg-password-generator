@@ -10,17 +10,12 @@ function generatePassword() {
   // Prompt length
   var passwordLength = Number(
     window.prompt(
-      "Enter your desired password length: ",
-      "Enter a number between 8 and 128"
+      "Your desired password length - Enter a number between 8 and 128: "
     )
-    // Validate length input
   );
-  if (isNaN(passwordLength)) {
+  // Validate input
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     window.alert("Please enter a number between 8 and 128.");
-    return;
-  }
-  if (passwordLength < 8 || passwordLength > 128) {
-    window.alert("Your password must be between 8 and 128 characters.");
     return;
   }
   // Confirm desired character types
@@ -61,7 +56,7 @@ function generatePassword() {
     charSet = charSet + "!#$%&()*+,-./:;<=>?@[]^_`{|}~";
   }
   // Choosing a random selection of characters according to user parameters of length and character type
-  
+
   var password = "";
   for (i = 1; i <= passwordLength; i++) {
     password =
@@ -72,7 +67,7 @@ function generatePassword() {
   console.log(charSet);
   console.log(password);
 
-  // Inserting generated password into the webpage
+  // Insert generated password into the webpage
 
   document.getElementById("password").innerHTML = password;
 }
